@@ -14,7 +14,7 @@ from config.base_config import Config
 from torch.nn.parallel import DistributedDataParallel as DDP
 
 start_port = random.choice(range(12355,12375)) #12358 # ResNet 18
-
+# port = 2 ** 15 + 2 ** 14 + hash(os.getuid() if sys.platform != "win32" else 1) % 2 ** 14
 def setup(rank, world_size,port):
     if sys.platform == 'win32':
         # Distributed package only covers collective communications with Gloo
@@ -83,7 +83,7 @@ def train_ddp(rank,cfg,return_dict):
     cleanup()
 
 
-def main(arg_num_threads=16,num_gpus=1):
+def main(arg_num_threads=16, num_gpus=1):
     arg_dataset = 'CIFAR10' # CIFAR10,CIFAR100
 
     if arg_dataset in ['CIFAR10','CIFAR100']:

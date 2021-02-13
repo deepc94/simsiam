@@ -17,7 +17,7 @@ class Config:
 
         # General Config
         parser.add_argument(
-            "--data", help="path to dataset base directory", default="/mnt/disk1/datasets"
+            "--data", help="path to dataset base directory", default="./datasets"
         )
 
         parser.add_argument(

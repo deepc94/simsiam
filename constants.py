@@ -1,2 +1,2 @@
-dataset_dir = '/mnt/data/datasets/'
-checkpoint_dir = '/mnt/data/checkpoints'
+dataset_dir = './datasets/'
+checkpoint_dir = './checkpoints/'
