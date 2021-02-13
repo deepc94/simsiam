@@ -1,3 +1,11 @@
+## Changes to run on gypsum
+
+1. clone the repository 
+2. cd simsiam
+3. ln -s /mnt/nfs/scratch1/dchakraborty/datasets datasets
+4. ln -s /mnt/nfs/scratch1/dchakraborty/SimSiam/checkpoints checkpoints
+5. pretraining checkpoints are saved under "checkpoints/simsiam/pretrain-cifar10" in gpu_0 folder
+
 # SimSiam
 This is an _Unofficial_ PyTorch implementation of **Exploring Simple Siamese Representation Learning [1]**. It is highly inspired by [PatrickHua's repository](https://github.com/PatrickHua/SimSiam). The key features in this repository are
 
